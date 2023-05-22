@@ -27,6 +27,6 @@
     ```
 
 2. 在系统设置中新建应用，名字随意，权限添加`环境变量`
-3. 修改jichang.py中的client_id和client_secret，改为新建应用的值。
-4. 新建环境变量JC_Passwd，值为email=xxxx;passwd=xxxx(你的邮箱和密码)
-5. 新建环境变量JC_COOKIE，值随便填一个，脚本运行的时候会自动登录获取cookie
+3. 修改jichang.py中的`client_id`和`client_secret`，改为新建应用的值。
+4. 新建环境变量`JC_Passwd`，值为`email=xxxx;passwd=xxxx`(你的邮箱和密码)
+5. 新建环境变量`JC_COOKIE`，值随便填一个，脚本运行的时候会自动登录获取cookie
