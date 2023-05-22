@@ -13,15 +13,20 @@
 
 ## 简单的操作
 
-拉取本站
+1. 拉取本站
 
-```sh
-ql repo https://github.com/yunzimo/APChinkin "jichang" "" "notify.py|QLApi.py"
-```
+    ```sh
+    ql repo https://github.com/yunzimo/APChinkin "jichang" "" "notify.py|QLApi.py"
+    ```
 
-青龙拉库命令解释：
+    青龙拉库命令解释：
 
-```sh
-ql repo <repourl> <path> <blacklist> <dependence> <branch>
-        <库地址>   <拉哪些> <不拉哪些> <依赖文件>    <分支>
-```
+    ```sh
+    ql repo <repourl> <path> <blacklist> <dependence> <branch>
+            <库地址>   <拉哪些> <不拉哪些> <依赖文件>    <分支>
+    ```
+
+2. 在系统设置中新建应用，名字随意，权限添加`环境变量`
+3. 修改jichang.py中的client_id和client_secret，改为新建应用的值。
+4. 新建环境变量JC_Passwd，值为email=xxxx;passwd=xxxx(你的邮箱和密码)
+5. 新建环境变量JC_COOKIE，值随便填一个，脚本运行的时候会自动登录获取cookie
