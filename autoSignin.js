@@ -3,7 +3,7 @@
 项目地址：https://github.com/mrabit/aliyundriveDailyCheck
 cron: 0 9,22 * * *
 */
-
+const $ = new Env('阿里云盘签到');
 const axios = require('axios')
 const { initInstance, getEnv, updateCkEnv } = require('./qlApi.js')
 const notify = require('./sendNotify')
