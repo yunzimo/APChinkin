@@ -18,7 +18,7 @@
 1. 拉取本站
 
     ```sh
-    ql repo https://github.com/yunzimo/APChinkin "jichang|autoSignin" "" "notify.py|QLApi.py|qlApi.js|sendNotify.js"
+    ql repo https://github.com/yunzimo/APChinkin "jichang|autoSignin" "" "notify.py|QLApi.py|qlApi.js|sendNotify.js|env.js"
     ```
 
     青龙拉库命令解释：
