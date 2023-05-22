@@ -16,7 +16,7 @@
 拉取本站
 
 ```sh
-ql repo https://github.com/yunzimo/APChinkin
+ql repo https://github.com/yunzimo/APChinkin "jichang" "" "notify.py|QLApi.py"
 ```
 
 青龙拉库命令解释：
