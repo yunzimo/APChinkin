@@ -1,6 +1,7 @@
 # APChinkin
 
-针对机场的青龙签到脚本，本脚本由于链接写死仅支持[最萌の云](https://www.cutecloud.net/)，当然去抓抓其他机场的签到链接进行替换，理论上支持所有机场。
+本仓库包含两个脚本，一个是针对机场的青龙签到脚本，本脚本由于链接写死仅支持[最萌の云](https://www.cutecloud.net/)，当然去抓抓其他机场的签到链接进行替换，理论上支持所有机场。
+另一个是[仓库](https://github.com/mrabit/aliyundriveDailyCheck)的阿里云签到脚本，机场签到脚本有一部分也是借鉴了这个脚本。
 
 ## 免责声明
 
@@ -11,12 +12,12 @@
 
 > 您使用或者复制了本仓库且本人制作的任何脚本，则视为 已接受 此声明，请仔细阅读
 
-## 简单的操作
+## 机场签到脚本
 
 1. 拉取本站
 
     ```sh
-    ql repo https://github.com/yunzimo/APChinkin "jichang" "" "notify.py|QLApi.py"
+    ql repo https://github.com/yunzimo/APChinkin "jichang|autoSignin" "" "notify.py|QLApi.py|qlApi.js|sendNotify.js"
     ```
 
     青龙拉库命令解释：
@@ -30,3 +31,18 @@
 3. 修改jichang.py中的`client_id`和`client_secret`，改为新建应用的值。
 4. 新建环境变量`JC_Passwd`，值为`email=xxxx;passwd=xxxx`(你的邮箱和密码)
 5. 新建环境变量`JC_COOKIE`，值随便填一个，脚本运行的时候会自动登录获取cookie
+
+## 阿里云签到脚本
+
+第一步：获取 refresh_token
+自动获取: 登录阿里云盘后，控制台粘贴 JSON.parse(localStorage.token).refresh_token
+
+![](https://github.com/yunzimo/APChinkin/master/assets/1.png)
+
+第二步：青龙面板添加依赖项
+axios
+
+第三步：添加环境变量
+refreshToken：阿里云盘的refresh_token, 添加多个可支持多账户签到
+
+第四步：修改qlApi.js，填入创建的阿里云盘应用的client_id和client_secret
